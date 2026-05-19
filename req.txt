@@ -1,0 +1,5 @@
+1: Test option added in cms to activate a carousel view for card blocks on mobile devices only Stripe with cards block example   
+
+2: Stop animation when block switches to mobile carousel view - verify no impact on tablet and above views Stripe with cards block example   
+
+3: Change text colors when  block background color changes Featured content block example
