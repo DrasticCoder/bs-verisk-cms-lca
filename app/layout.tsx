@@ -12,7 +12,7 @@ const cabinFont = Cabin({
 });
 
 export const metadata: Metadata = {
-  title: 'Verisk ',
+  title: 'Verisk CMS',
   description: ' application for Verisk',
 };
 
