@@ -8,7 +8,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Access-Control-Allow-Origin',
-            value: 'http://localhost:3001',
+            value: 'https://verisk.drasticcoder.in',
           },
           {
             key: 'Access-Control-Allow-Credentials',
