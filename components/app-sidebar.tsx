@@ -27,7 +27,7 @@ const items = [
     icon: Building2,
   },
   {
-    title: 'Temp Config',
+    title: 'Site Config',
     url: '/site-config',
     icon: Settings,
   },

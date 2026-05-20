@@ -132,12 +132,10 @@ export default function SiteConfigPage() {
 
           <div className="p-5">
             <div>
-              <p className="font-semibold text-gray-900">
-                Website Text Color
-              </p>
+              <p className="font-semibold text-gray-900">Website Text Color</p>
               <p className="text-sm text-gray-500">
                 Choose one approved color. The exact hex code is published to
-                the temp site.
+                the site.
               </p>
             </div>
 
