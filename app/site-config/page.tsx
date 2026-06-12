@@ -102,33 +102,38 @@ export default function SiteConfigPage() {
         </div>
 
         <div className="rounded-lg border border-gray-200 bg-white">
-          {configOptions.map((option) => (
-            <label
-              key={option.key}
-              className="flex cursor-pointer items-center gap-4 border-b border-gray-100 p-5 last:border-b-0"
-            >
-              <input
-                type="checkbox"
-                checked={config[option.key]}
-                disabled={isLoading || isSaving}
-                onChange={(event) =>
-                  setConfig((current) => ({
-                    ...current,
-                    [option.key]: event.target.checked,
-                  }))
-                }
-                className="h-5 w-5 rounded border-gray-300"
-              />
-              <span className="flex-1">
-                <span className="block font-semibold text-gray-900">
-                  {option.title}
+          {configOptions.map((option) => {
+            // Check if the current option toggle is active in the config state
+            const isOptionActive = !!config[option.key];
+
+            return (
+              <label
+                key={option.key}
+                className="flex cursor-pointer items-center gap-4 border-b border-gray-100 p-5 last:border-b-0"
+              >
+                <input
+                  type="checkbox"
+                  checked={isOptionActive}
+                  disabled={isLoading || isSaving}
+                  onChange={(event) =>
+                    setConfig((current) => ({
+                      ...current,
+                      [option.key]: event.target.checked,
+                    }))
+                  }
+                  className="h-5 w-5 rounded border-gray-300"
+                />
+                <span className="flex-1">
+                  <span className="block font-semibold text-gray-900">
+                    {option.title} - {isOptionActive ? 'ON' : 'OFF'}
+                  </span>
+                  <span className="block text-sm text-gray-500">
+                    {option.description}
+                  </span>
                 </span>
-                <span className="block text-sm text-gray-500">
-                  {option.description}
-                </span>
-              </span>
-            </label>
-          ))}
+              </label>
+            );
+          })}
 
           <div className="p-5">
             <div>
